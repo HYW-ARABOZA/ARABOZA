@@ -1,0 +1,19 @@
+<svg width="126" height="43" viewBox="0 0 126 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="kakao">
+<g id="Rectangle 3" filter="url(#filter0_d_115_3856)">
+<rect x="2" y="2" width="120" height="37" rx="3" fill="#FEE500"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_115_3856" x="0" y="0" width="126" height="43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="1" dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_115_3856"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_115_3856" result="shape"/>
+</filter>
+</defs>
+</svg>

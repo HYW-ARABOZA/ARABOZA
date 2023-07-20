@@ -9,10 +9,12 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from . import mysettings
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -32,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'accounts',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,12 +77,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = mysettings.DATABASES
 
 
 # Password validation
@@ -122,3 +120,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 로그아웃 완료 후 이동할 템플릿
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+# 로그아웃 요청 후 즉시 로그아웃 되도록 (확인 페이지 x)
+ACCOUNT_LOGOUT_ON_GET = True
+
+# 미디어
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+AUTH_USER_MODEL = 'user.User'
+
+# static 파일
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# models.py에서 만든 User 모델이 Django의 기본 유저 모델이라고 명시
+AUTH_USER_MODEL = 'accounts.User'
+
+# 로그인 방법
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
