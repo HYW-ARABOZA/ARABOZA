@@ -3,4 +3,4 @@
 *.pot
 *.pyc
 __pycache__/
-mysettings.py
+project/mysettings.py

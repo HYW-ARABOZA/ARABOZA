@@ -65,15 +65,17 @@
         </div>
         <!-- 카카오,네이버 -->
         <div class="buttons">
+            {% load socialaccount %}
+            {% providers_media_js %}
             <div class="kakao">
-                <button class="kakao2" >
+                <button class="kakao2" onclick="location.href='{% provider_login_url 'kakao' %}'">
                     <img src="{% static '/media/path.svg' %}" alt="">
 
 
                 </button>
             </div>
             <div class="naver-2">
-                <button class="naver2">
+                <button class="naver2" onclick="location.href='{% provider_login_url 'naver' %}'">
                     <img src="{% static '/media/path-288.svg' %}" alt="">
                 </button>
             </div>
