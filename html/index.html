@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login3.css">
+    
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- nav bar 설정 -->
+        <!-- ARABOZA 로고 위치 -->
+        <span class="main-logo">
+            <img src="../image/ideathon-logo-1.svg" alt="">
+        </span>
+        <!-- LOGIN  -->
+        <section class="login">
+            <form action="">
+
+                <ul>
+                    <!-- 아이디 입력 -->
+                    <li><input type="text" placeholder="ID" title="아이디 입력"></li>
+                    <!-- 비밀번호 입력 -->
+                    <li><input type="password" placeholder="PW" title="비밀번호 입력"></li>
+                    <!-- 비밀번호 재설정 -->
+                    <li class="pw-reset">
+                        <p>비밀번호를 잊으셨나요?</p>
+                        <a href="#" id="open-modal">비밀번호 재설정</a>
+                    </li>
+            </form>
+
+            <div>
+
+                <button class="loogin-button">LOGIN</button>
+            </div>
+
+
+            <div class="page">
+                <p>처음이신가요?</p>
+                <a href="회원가입 페이지">회원가입</a>
+            </div>
+            </ul>
+        </section>
+        <!-- 모달 -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>비밀번호 재설정</h2>
+                <form id="reset-form">
+                    <p id="new-pw">새 비밀번호</p> <br>
+                    <input type="password" placeholder=" PW" required>
+                    <p id="check-pw">새 비밀번호 확인</p> <br>
+                    <input type="password" placeholder=" PW" required> <br>
+                    <p></p> <br>
+                    <button class="btn">확인</button>
+
+                </form>
+            </div>
+        </div>
+        <!-- 카카오,네이버 -->
+        <div class="buttons">
+            <div class="kakao">
+                <button class="kakao2">
+                    <img src="../image/path.svg" alt="">
+
+
+                </button>
+            </div>
+            <div class="naver-2">
+                <button class="naver2">
+                    <img src="../image/path-288.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>
