@@ -35,6 +35,12 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts',
     'rest_framework',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
+    'allauth.socialaccount.providers.naver',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -141,4 +147,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # 로그인 방법
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
+SITE_ID = 1
+# LOGIN_REDIRECT_URL = '/'
