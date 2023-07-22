@@ -41,7 +41,7 @@ header {
     transform: translateY(-20%);
 }
 
-/* 상단바에 있는 뒤로가기버튼,저장버튼  */
+
 
 .left-button,
 .right-button {
@@ -72,7 +72,8 @@ header {
 }
 
 
-/* 날짜 */
+
+
 .date {
     color: #3A3A3A;
     text-align: center;
@@ -84,7 +85,7 @@ header {
     /* 87.5% */
     flex: 0.5;
 }
-/* 대충 많이 피곤한 날-어떤 날인지 기술하는 부분 */
+
 .name {
     text-align: center;
     transform: translateY(-100%);
@@ -100,7 +101,7 @@ p {
     line-height: 21px;
     /* 116.667% */
 }
-/* 이미지 업로드하는 화면? */
+
 input[type="file"] {
     display: none;
 }
@@ -151,13 +152,14 @@ input[type="file"] {
 .submit {
     display: none;
 }
-/* 딸기캐릭터 */
+
 .character {
-    width: 10vw;
-    max-width: 100px;
-    height: auto; 
-    margin-top: 30px;
-    
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    top: 100%;
+    transform: translateY(-100%);
 }
 
 .container-1 {
@@ -172,7 +174,7 @@ input[type="file"] {
     height: 399px;
     background-color: #FFF7ED;
     border: none;
-    transform: translateY(-15%);
+    transform: translateY(-20%);
     justify-content: center;
     resize: vertical;
     padding: 10px;
@@ -181,7 +183,6 @@ input[type="file"] {
 
 }
 
-/* 메뉴 아이콘 부분 - 누르면 X로 변하는 아이콘  */
 
 input[id="menuicon"] {
     display: none;
@@ -192,7 +193,7 @@ input[id="menuicon"]+label {
     width: 50px;
     height: 22px;
     position: relative;
-    top: -60%;
+    top: -65%;
     left: 15px;
     cursor: pointer;
 }
@@ -246,9 +247,9 @@ input[id="menuicon"]:checked+label span:nth-child(3) {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-}
-
-.popup-content {
+  }
+  
+  .popup-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -256,41 +257,38 @@ input[id="menuicon"]:checked+label span:nth-child(3) {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-}
-
-.close-button {
+  }
+  
+  .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
     font-size: 18px;
     display: none;
-}
-
-.popup-content p {
+  }
+  
+  .popup-content p {
     font-size: 16px;
-}
+  }
 
 
-h3 {
+  h3{
     text-align: center;
-}
-
-h5 {
+  }
+  h5{
     text-align: center;
 
-}
-
-.buttons {
+  }
+  .buttons{
     display: flex;
     justify-content: center;
-}
-
-.button-text h5 {
+  }
+  .button-text h5{
     margin: -5% 0;
-}
-
-.buttons button {
+  }
+  
+  .buttons button{
     margin: 7%;
     margin-top: 10%;
     border: none;
@@ -299,18 +297,16 @@ h5 {
     font-size: 17px;
     font-weight: 600;
     font-size: normal;
-}
+  }
 
-.buttons2 {
+  .buttons2{
     display: flex;
     justify-content: center;
-}
-
-.button-text2 h5 {
+  }
+  .button-text2 h5{
     margin: -5% 0;
-}
-
-.buttons2 button {
+  }
+  .buttons2 button{
     margin: 7%;
     margin-top: 10%;
     border: none;
@@ -319,248 +315,25 @@ h5 {
     font-size: 17px;
     font-weight: 600;
     font-style: normal;
-}
+  }
+@media screen and (max-width: 768px) {
 
-/* 앱 */
-@media screen and (max-width: 480px) {
-    .container {
-        top: 10%;
-    }
-
-    
-    header {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-
-    .left-button,
-    .right-button {
-        margin: 10px 0;
-    }
-
-    .date {
-        font-size: 18px;
-    }
-
-    .content,
-    .file-label {
-        width: 100%;
-    }
     .textarea {
-        width: 100%;
-    }
-    .character {
-        display: none;
+        height: 100px;
     }
 }
 
-/* 아이패드,태블릿 */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    
-    .container{
-        top: 20%;
+@media screen and (max-width: 480px) {
+  
+    .container {
+        max-width: 90%;
     }
-    .content,
-    .file-label{
-        width: 80%;;
+
+    .textarea {
+        height: 80px;
     }
-    .textarea{
-        width: 80%;;
+
+    .file-label {
+        margin-bottom: 5px; 
     }
-    }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-        body {
-          font-size: 16px;
-          background-color: #f5f5f5;
-        }
-  
-        .container {
-          width: 80%;
-          max-width: 800px;
-          background-color: #ffffff;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          margin: 50px auto;
-        }
-  
-        .name p {
-          font-size: 24px;
-          color: #333333;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-  
-        .content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 30px;
-        }
-  
-        .file-label {
-          padding: 20px 40px;
-          font-size: 18px;
-          color: #ffffff;
-          background-color: #007bff;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-  
-        .file-label::before {
-          content: "Select File";
-        }
-  
-        .file-label:hover {
-          background-color: #0056b3;
-        }
-  
-        .character img {
-          width: 100px;
-          height: 100px;
-          margin-top: 30px;
-        }
-  
-        .text {
-          margin-top: 30px;
-          width: 100%;
-          text-align: center;
-        }
-  
-        .textarea {
-          width: 90%;
-          height: 250px;
-          font-size: 16px;
-          padding: 10px;
-          resize: vertical;
-          border: 2px solid #dcdcdc;
-          border-radius: 5px;
-          outline: none;
-        }
-  
-        .buttons {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
-        }
-  
-        .buttons button {
-          margin: 10px;
-          padding: 10px 20px;
-          font-size: 18px;
-          background-color: #007bff;
-          color: #ffffff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-  
-        .buttons button:hover {
-          background-color: #0056b3;
-        }
-      }
-  
-      /* 노트북 세로 방향 */
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-        body {
-          font-size: 14px;
-          background-color: #f5f5f5;
-        }
-  
-        .container {
-          width: 90%;
-          max-width: 500px;
-          background-color: #ffffff;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          margin: 50px auto;
-        }
-  
-        .name p {
-          font-size: 20px;
-          color: #333333;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-  
-        .content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 20px;
-        }
-  
-        .file-label {
-          padding: 15px 30px;
-          font-size: 16px;
-          color: #ffffff;
-          background-color: #007bff;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-  
-        .file-label::before {
-          content: "Select File";
-        }
-  
-        .file-label:hover {
-          background-color: #0056b3;
-        }
-  
-        .character img {
-          width: 80px;
-          height: 80px;
-          margin-top: 20px;
-        }
-  
-        .text {
-          margin-top: 20px;
-          width: 100%;
-          text-align: center;
-        }
-  
-        .textarea {
-          width: 90%;
-          height: 150px;
-          font-size: 14px;
-          padding: 10px;
-          resize: vertical;
-          border: 2px solid #dcdcdc;
-          border-radius: 5px;
-          outline: none;
-        }
-  
-        .buttons {
-          display: flex;
-          justify-content: center;
-          margin-top: 15px;
-        }
-  
-        .buttons button {
-          margin: 8px;
-          padding: 8px 16px;
-          font-size: 16px;
-          background-color: #007bff;
-          color: #ffffff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-  
-        .buttons button:hover {
-          background-color: #0056b3;
-        }
-      }
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cinzel:wght@500&family=Dongle:wght@300&family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Nanum+Gothic&family=Press+Start+2P&display=swap');
-
-
-
+}
