@@ -1,6 +1,0 @@
-.idea/
-*.log
-*.pot
-*.pyc
-__pycache__/
-project/mysettings.py
