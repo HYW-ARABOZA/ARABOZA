@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../css/paragraph.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="left-button">
+                <img src="../image/chevron-small-left-solid.svg" alt="">
+            </div>
+            <p class="date" contenteditable="true">5,JUNE</p>
+            <div class="right-button">
+                <img src="../image/checkmark-solid.svg" alt="">
+            </div>
+        </header>
+        <div class="name" contenteditable="true">
+            <p>대충 많이 피곤한 날</p>
+        </div>
+        <div class="content">
+            <div class="content">
+                <!-- 이미지 업로드  -->
+                <form action="" method="post" enctype="multipart/form-data">
+                    <label for="file-input" class="file-label"></label>
+                    <input class="file-input" type="file" id="file-input">
+                    <input class="submit" type="submit">
+                </form>
+            </div>
+        </div>
+        <!-- 딸기캐릭터 -->
+        <div class="character">
+            <img src="../image/character.svg" alt="">
+        </div>
+        <!-- 줄글창 -->
+        <div class="container-1">
+            <div class="text">
+                <form action="">
+                    <div id="textarea-wrapper">
+                        <textarea class="textarea" name="paragraph" id="paragraph" cols="30" rows="10">오늘의 감정을 말해주세요</textarea>
+                    </div>
+                </form>
+            </div>
+            <!-- 이런 메뉴바처럼 보이는게 있길래 만들긴 했는데 기능이 뭔지 몰라 기능 추가는 딱히 안했습니다 -->
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- 팝업창 -->
+    <!-- 첫 번째 팝업 -->
+    <div class="popup" id="popup1">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup('popup1')">&times;</span>
+            <div class="button-text">
+
+                <h3>작성취소</h3><br>
+                <h5>여기서 돌아가면 작성한 내용이 </h5> <br>
+                <h5>모두 소실됩니다. 뒤로 가시겠습니까?</h5>
+            </div>
+            <div class="buttons">
+                <button  onclick="saveContent()">예</button>
+                <button  onclick="closePopup('popup1')">아니요</button>
+            </div>
+        </div>
+    </div>
+    <!-- 두 번째 팝업 -->
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup('popup2')">&times;</span>
+            <div class="button-text2">
+                
+                <h3>저장</h3><br>
+                <h5>수정이 불가하므로 한 번 더 확인해주세요</h5> <br>
+                <h5>정말 작성한 내용을 저장하시겠습니까?</h5>
+            </div>
+            <div class="buttons2">
+                <button onclick="saveContent()">예</button>
+                <button onclick="closePopup('popup2')">아니요</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/paragraph.js"></script>
+</body>
+
+</html>
