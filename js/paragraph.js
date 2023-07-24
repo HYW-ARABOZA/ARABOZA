@@ -14,6 +14,8 @@ document.querySelector("form").onsubmit = function (event) {
     );
 };
 
+
+
 // 팝업
 document.querySelector(".left-button").addEventListener("click", function () {
     openPopup("popup1");
