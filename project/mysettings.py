@@ -1,10 +1,10 @@
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ARABOZA_db',
-        'USER': 'seoyun',
-        'PASSWORD': 'tjdbs123',
+        'NAME': 'araboza_db',
+        'USER': 'wjqwjql1',
+        'PASSWORD': 'k22456',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': '3306',
     }
 }
