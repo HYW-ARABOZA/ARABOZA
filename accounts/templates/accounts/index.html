@@ -21,11 +21,11 @@
         </span>
         <!-- LOGIN  -->
         <section class="login">
-            <form action="{% url 'accounts:login' %}" method="post">
-            {% csrf_token %}
+            <form action="">
+
                 <ul>
                     <!-- 아이디 입력 -->
-                    <li><input type="input" placeholder="ID" title="아이디 입력"></li>
+                    <li><input type="text" placeholder="ID" title="아이디 입력"></li>
                     <!-- 비밀번호 입력 -->
                     <li><input type="password" placeholder="PW" title="비밀번호 입력"></li>
                     <!-- 비밀번호 재설정 -->
@@ -37,7 +37,7 @@
 
             <div>
 
-                <button input type ="submit" class="login-button" value="Login">Login</button>
+                <button class="loogin-button">LOGIN</button>
             </div>
 
 

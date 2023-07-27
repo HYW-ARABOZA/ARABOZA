@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 from django.utils import timezone
-from django.core.exceptions import ValidationError
 
 # Create your models here.
 class UserManager(BaseUserManager):
@@ -34,7 +33,7 @@ class UserManager(BaseUserManager):
         return user
 
 class User(AbstractBaseUser, PermissionsMixin):
-    nickname = models.CharField(max_length=15)
+    nickname = models.CharField(max_length=15, unique=True)
     username = models.CharField(max_length=30, unique=True)
     email = models.EmailField(max_length=50, unique=True)
     profileImg = models.ImageField(upload_to='profiles/%Y/%m/%d', default='default.png', blank=True, null=True)
