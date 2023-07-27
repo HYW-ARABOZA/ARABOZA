@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.shortcuts import render
 from rest_framework.views import APIView
 from django.contrib.auth.hashers import make_password, check_password
@@ -54,3 +55,37 @@ class Login(APIView):
         request.session['email'] = user.email
 
         return Response(status=200, data=dict(message='로그인 성공!'))
+        return HttpResponseRedirect(reverse('diary:mainIndex'))
+
+
+def login(request):
+    if request.method == "GET":
+        return render(request, 'accounts/login.html')
+
+    elif request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+
+        if email is None:
+            return Response(status=500, data=dict(message='이메일을 입력해주세요'))
+
+        if password is None:
+            return Response(status=500, data=dict(message='비밀번호를 입력해주세요'))
+
+        user = authenticate(request, email=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            return Response(status=200, data=dict(message='로그인 성공!'))
+            return HttpResponseRedirect(reverse('diary:mainIndex.html'))
+
+        elif user is None:
+            return Response(status=500, data=dict(messag='입력정보가 올바르지않습니다.'))
+
+        elif check_password(password, user.password) is False:
+            return Response(status=500, data=dict(message='비밀번호가 올바르지 않습니다.'))
+
+
+
+
+

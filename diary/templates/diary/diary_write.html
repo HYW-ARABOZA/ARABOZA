@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diary</title>
+</head>
+<body>
+    <h1>Diary 작성</h1>
+    <form method = "POST">
+        {% csrf_token %} {{form.as_p}}
+        <button type="submit">작성 완료</button>
+    </form>
+
+</body>
+</html>
