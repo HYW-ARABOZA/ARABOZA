@@ -7,23 +7,25 @@
     <title>ARABOZA, 나의 하루 감정 기록</title>
     <link rel="stylesheet" href="{% static 'css/mainStyle.css' %}" type="text/css">
     <script src="{% static 'js/mainScript.js' %}" defer type="text/javascript"></script>
-    {% block contents %}
+    {% block content %}
 </head>
 <body>
     <div id="wrap">
         <header>
+            {% for user in userinfo %}
             <div class="title">
                 "
-                <span class="nickname">{{User.nickname}}</span>
+                <span class="nickname">{{user.username}}</span>
                 " 의 기록 모음
             </div>
+            {% endfor %}
         </header>
         <main>
             <section class="activeBtn">
                 <a href="#">
                     <img src="{% static 'media/cart-solid.png' %}">
                 </a>
-                <a href="{% url 'diary_post' %}">
+                <a href="{% url 'diary:diary_post' %}">
                     <img src="{% static 'media/new_btn.png' %}">
                 </a>
             </section>
